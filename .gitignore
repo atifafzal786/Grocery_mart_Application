@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.Python
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# App generated data
+grocery_inventory.db
+invoices/
+
+# Logs / exports
+*.log
+*.csv
+*.xlsx
+
+# Secrets
+.env
+

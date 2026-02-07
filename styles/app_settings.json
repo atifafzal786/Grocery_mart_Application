@@ -1,0 +1,10 @@
+{
+    "ui_scaling": 1.0,
+    "accent": "primary",
+    "inventory_low_stock_threshold": 5,
+    "scan_default_action": "Receive (+)",
+    "scan_default_qty": 1,
+    "monitor_auto_refresh": true,
+    "monitor_refresh_interval_ms": 2000,
+    "backup_dir": ""
+}

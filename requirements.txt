@@ -1,0 +1,7 @@
+ttkbootstrap>=1.10.1
+matplotlib>=3.8.0
+pandas>=2.2.0
+openpyxl>=3.1.2
+fpdf2>=2.7.9
+# Keep NumPy on 1.x by default for compatibility with compiled wheels in many Python setups.
+numpy>=1.26,<2
