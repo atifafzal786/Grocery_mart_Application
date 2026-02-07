@@ -6,7 +6,7 @@ from pathlib import Path
 
 from ttkbootstrap import Button, Entry, Frame, Label, StringVar
 
-from auth_service import AuthUser, verify_credentials
+from .auth_service import AuthUser, verify_credentials
 
 
 LOGO_PATH = Path(__file__).resolve().parent / "logo" / "login_page_logo.png"

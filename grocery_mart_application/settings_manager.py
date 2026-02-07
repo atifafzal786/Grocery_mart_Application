@@ -10,12 +10,13 @@ from tkinter import filedialog, messagebox, simpledialog
 import tkinter as tk
 from ttkbootstrap import Button, Checkbutton, Combobox, Entry, Frame, Label, StringVar
 
-from database import DB_PATH, log_event
-from auth_service import change_password
-from utils.app_settings import get_settings, update_settings
+from .database import DB_PATH, log_event
+from .auth_service import change_password
+from .utils.app_settings import get_settings, update_settings
 
 
-THEME_PATH = Path(__file__).resolve().parent / "styles" / "theme.json"
+DEFAULT_THEME_PATH = Path(__file__).resolve().parent / "styles" / "theme.json"
+THEME_PATH = Path.cwd() / "styles" / "theme.json"
 
 
 class SettingsManager(Frame):

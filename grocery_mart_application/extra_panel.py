@@ -8,9 +8,9 @@ from tkinter import filedialog, messagebox
 
 from ttkbootstrap import Button, Checkbutton, Combobox, Entry, Frame, Label, Scrollbar, StringVar, Treeview
 
-from database import connect, log_event
-from auth_service import verify_credentials
-from utils.app_settings import get_setting, update_settings
+from .database import connect, log_event
+from .auth_service import verify_credentials
+from .utils.app_settings import get_setting, update_settings
 
 try:
     import pandas as pd  # type: ignore

@@ -5,7 +5,8 @@ from pathlib import Path
 from typing import Any
 
 
-SETTINGS_PATH = Path(__file__).resolve().parents[1] / "styles" / "app_settings.json"
+DEFAULT_SETTINGS_PATH = Path(__file__).resolve().parents[1] / "styles" / "app_settings.json"
+SETTINGS_PATH = Path.cwd() / "styles" / "app_settings.json"
 
 DEFAULTS: dict[str, Any] = {
     "ui_scaling": 1.0,
@@ -21,7 +22,8 @@ DEFAULTS: dict[str, Any] = {
 
 def load_settings() -> dict[str, Any]:
     try:
-        raw = SETTINGS_PATH.read_text(encoding="utf-8")
+        path = SETTINGS_PATH if SETTINGS_PATH.exists() else DEFAULT_SETTINGS_PATH
+        raw = path.read_text(encoding="utf-8")
         data = json.loads(raw)
         return data if isinstance(data, dict) else {}
     except Exception:

@@ -5,8 +5,8 @@ from tkinter import messagebox
 
 from ttkbootstrap import Button, Combobox, Entry, Frame, Label, Scrollbar, StringVar, Treeview
 
-from database import connect, log_event
-from utils.helpers import validate_product_data
+from .database import connect, log_event
+from .utils.helpers import validate_product_data
 
 
 class ProductManager(Frame):

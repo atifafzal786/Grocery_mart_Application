@@ -5,7 +5,7 @@ import hmac
 import os
 from dataclasses import dataclass
 
-from database import connect, setup_database
+from .database import connect, setup_database
 
 PBKDF2_ITERS = 210_000
 

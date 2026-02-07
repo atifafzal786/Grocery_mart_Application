@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import sqlite3
 from contextlib import contextmanager
+import os
 from pathlib import Path
 from typing import Iterable
 
-DB_PATH = Path(__file__).resolve().parent / "grocery_inventory.db"
+_DEFAULT_DB_PATH = Path.cwd() / "grocery_inventory.db"
+DB_PATH = Path(os.environ.get("GROCERY_MART_DB_PATH", str(_DEFAULT_DB_PATH))).expanduser().resolve()
 
 
 @contextmanager

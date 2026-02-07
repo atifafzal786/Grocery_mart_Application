@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from auth_service import ensure_default_admin
-from database import DB_PATH, connect, setup_database
+from grocery_mart_application.database import DB_PATH, connect, setup_database
 
 
 def _maybe_reset_db(reset: bool) -> None:

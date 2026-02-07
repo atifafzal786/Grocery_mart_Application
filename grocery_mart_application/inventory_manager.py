@@ -7,9 +7,9 @@ from threading import Event, Lock, Thread
 
 from ttkbootstrap import Button, Combobox, Entry, Frame, Label, Scrollbar, StringVar, Treeview
 
-from database import connect, log_event
-from utils.app_settings import get_setting
-from utils.helpers import validate_product_data
+from .database import connect, log_event
+from .utils.app_settings import get_setting
+from .utils.helpers import validate_product_data
 
 try:
     import pandas as pd  # type: ignore

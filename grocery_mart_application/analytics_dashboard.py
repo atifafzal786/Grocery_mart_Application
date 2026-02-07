@@ -6,8 +6,8 @@ from tkinter import filedialog, messagebox
 
 from ttkbootstrap import Button, Combobox, Entry, Frame, Label, StringVar
 
-from database import connect
-from utils.app_settings import get_setting
+from .database import connect
+from .utils.app_settings import get_setting
 
 try:
     import matplotlib.pyplot as plt  # type: ignore

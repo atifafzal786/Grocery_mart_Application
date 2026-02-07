@@ -1,3 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grocery-mart-application"
+version = "0.1.0"
+description = "Local-first desktop grocery inventory and sales manager (Tkinter + ttkbootstrap + SQLite)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "atifafzal786" }]
+keywords = ["inventory", "sales", "tkinter", "sqlite", "pos"]
+dependencies = [
+  "ttkbootstrap>=1.10.1",
+  "matplotlib>=3.8.0",
+  "pandas>=2.2.0",
+  "openpyxl>=3.1.2",
+  "fpdf2>=2.7.9",
+  "numpy>=1.26,<2",
+]
+
+[project.optional-dependencies]
+camera = ["opencv-contrib-python>=4.9.0.80", "pyzbar>=0.1.9"]
+dev = ["ruff>=0.6.0", "black>=24.0.0", "pytest>=8.0.0"]
+
+[project.urls]
+Repository = "https://github.com/atifafzal786/Grocery_mart_Application"
+Documentation = "https://github.com/atifafzal786/Grocery_mart_Application/tree/main/docs"
+
+[project.scripts]
+grocery-mart = "grocery_mart_application.main:main"
+grocery-mart-init-db = "grocery_mart_application.init_db:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["grocery_mart_application*"]
+
+[tool.setuptools.package-data]
+grocery_mart_application = ["styles/*.json", "logo/*.png"]
+
 [tool.black]
 line-length = 110
 target-version = ["py311", "py312"]

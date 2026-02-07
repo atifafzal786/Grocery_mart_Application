@@ -6,19 +6,19 @@ from pathlib import Path
 
 from ttkbootstrap import Button, Frame, Label, Separator
 
-from analytics_dashboard import AnalyticsDashboard
-from extra_panel import (
+from .analytics_dashboard import AnalyticsDashboard
+from .extra_panel import (
     ExportDataPanel,
     InvoiceManagerPanel,
     LockSessionPanel,
     MonitorPanel,
     SearchProductPanel,
 )
-from home_panel import HomePanel
-from inventory_manager import InventoryManager
-from sales_manager import SalesManager
-from settings_manager import SettingsManager
-from supplier_manager import SupplierManager
+from .home_panel import HomePanel
+from .inventory_manager import InventoryManager
+from .sales_manager import SalesManager
+from .settings_manager import SettingsManager
+from .supplier_manager import SupplierManager
 
 
 APP_BG_PATH = Path(__file__).resolve().parent / "logo" / "background_image.png"

@@ -5,8 +5,8 @@ from datetime import datetime
 
 from ttkbootstrap import Button, Frame, Label
 
-from database import connect
-from utils.app_settings import get_setting
+from .database import connect
+from .utils.app_settings import get_setting
 
 
 DEFAULT_LOW_STOCK_THRESHOLD = 5

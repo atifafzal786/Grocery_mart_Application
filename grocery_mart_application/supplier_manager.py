@@ -5,7 +5,7 @@ from tkinter import messagebox
 
 from ttkbootstrap import Button, Entry, Frame, Label, Scrollbar, StringVar, Treeview
 
-from database import connect, log_event
+from .database import connect, log_event
 
 
 class SupplierManager(Frame):

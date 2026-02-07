@@ -1,4 +1,4 @@
-from grocery_mart_application.init_db import main
+from .main import main
 
 
 if __name__ == "__main__":
